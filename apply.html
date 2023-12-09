@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="script.js"></script>
+    <title>Könyvajánlás</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Kreatív Klub</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Kezdőlap</a></li>
+                <li><a href="origami.html">Origami</a></li>
+                <li><a href="knitting.html">Kötés</a></li>
+                <li><a href="apply.html">Jelentkezés</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="apply-container">
+        <h2>Klubjelentkezés</h2>
+
+        <form>
+            <table class="applyTable">
+                <tr>
+                    <td>Vezetéknév:</td>
+                    <td>
+                        <input type="text" id="personLastName" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Keresztnév:</td>
+                    <td>
+                        <input type="text" id="personFirstName" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>
+                        <input type="text" id="personEmail" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Születetési dátum:</td>
+                    <td>
+                        <input type="date" id="personBirthday">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kedvenc Szín:</td>
+                    <td>
+                        <input type="color" id="personColor" value="#ffffff">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bemutatkozás:</td>
+                    <td>
+                        <textarea id="introduction" rows="4" maxlength="1000"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Klubjelentkezés:</td>
+                    <td>
+                        <input type="radio" id="origami" name="klubApply" value="origami">
+                        <label for="origami">origami</label>
+                        <input type="radio" id="knitting" name="klubApply" value="knitting">
+                        <label for="knitting">kötés</label>
+                        <input type="radio" id="both" name="klubApply" value="both">
+                        <label for="both">mindkettő</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <label for="termsCheckbox">
+                            <input type="checkbox" id="termsCheckbox" required>
+                            Elolvastam és elfogadom az adatkezelési nyilatkozatot.
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <span class="wrapper"> <input type="button" id="validate" value="validate" /> </span>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <p id="successMessage" style="color: green;"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Kreatív Klub</p>
+    </footer>
+
+</body>
+
+</html>
