@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="script.js"></script>
+    <title>Kreatív Klub</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Kreatív Klub</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Kezdőlap</a></li>
+                <li><a href="origami.html">Origami</a></li>
+                <li><a href="knitting.html">Kötés</a></li>
+                <li><a href="apply.html">Jelentkezés</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="knitting-home">
+        <h1>Kötő klub</h1>
+        <h3>Mi az a kötés?</h3>
+        <p>
+            Kötéskor tűk és fonál segítségével dolgozunk. Készíthetünk ruhákat, anyagokat, takarókat, a lehetőségek
+            tárháza hatalmas.
+        </p><img id="imageKnitting" src="images/knitting.jpg" alt="Knitting">
+        <br>
+        <h3>Mi a különbség a kötés és a horgolás között?</h3>
+        <ol>
+            <li>Kötéskor fonallal dolgozunk, és legalább két tűre van szükségünk. A kötőtűk hegyesek és különböző
+                anyagokból készülhetnek - leggyakrabban bambuszból, klasszikus fából, alumíniumból, acélból vagy
+                karbonból. Valamennyi tűnek megvan a sajátos tulajdonsága, ennek köszönhetően többféle technikához is
+                használhatóak. A tűk vastagsága és hosszúsága különböző, vannak kör alakú tűk és olyan kötőtűk,
+                amelyeknek mindkét vége hegyes. A horgoláshoz csak fonalra és egy horgolótűre van szükség. A horgolótűk
+                vastagsága és hossza is különböző lehet.</li>
+            <li>A kötés során úgy dolgozunk, hogy az adott sor összes szemét egyszerre a kötőtűn kell tartani.
+                Horgolásnál viszont csak egy szemmel „dolgozunk aktívan“.</li>
+            <li>Kötéshez és horgoláshoz is használhatjuk ugyanazt a fonalat. Akkor ütközhetünk csak problémába, ha
+                cérnával szeretnénk dolgozni. Cérnával csak a horgolótű barátkozik.</li>
+            <li>A nehezebb dolga lehet kör- vagy henger formájú alakzatok kötése esetén – ehhez legalább három vagy öt
+                kötőtűt kell használni. A horgolás ilyen minták esetén sokkal jobb választás. Egyszerre csak egy
+                horgolótűre lesz szüksége.
+            </li>
+            <li>Ha a kötés során „elszaladt” egy szem, akkor elveszik egy egész oszlop vagy sor, amelyek a szem alatt
+                találhatóak. A horgolásnak hatalmas előnye van ebben a tekintetben is. Az egyes sorok semmilyen módon
+                nem befolyásolják egymást, így nem fordulhat elő, hogy egy szem „elszalad“ és egy egész sor elveszik. Ez
+                egy jó hír a horgolás szerelmeseinek.
+            </li>
+        </ol>
+        <p>
+            A teljes lista megtekinthető itt:
+            <a id="knitting-link"
+                href="https://mimib.hu/index.php?route=tltblog/tltblog&tltpath=blog&tltblog_id=7">Tudja mi
+                a különbség a kötés és a horgolás között?</a>
+            <br>
+        </p>
+        <p>
+            A tanfolyamon több kategóriában, több nehézségi szinten lehet megtanulni a kötés rejtelmeit.
+        <h4>Kötési kategóriáink</h4>
+        <table id="knitting-table">
+            <thead>
+                <tr>
+                    <th>Kategória</th>
+                    <th>Leírás</th>
+                    <th>Nehézség</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sálak</td>
+                    <td>Különböző sálkötési technikák.</td>
+                    <td>Kezdő</td>
+                </tr>
+                <tr>
+                    <td>Pulóverek</td>
+                    <td>Kötött pulóverek és kardigánok kötése. </td>
+                    <td>Középhaladó</td>
+                </tr>
+                <tr>
+                    <td>Sapkák</td>
+                    <td>A legkülönbözőbb sapkák, fejfedők kötése különböző nehézségi fokozaton. </td>
+                    <td>Kezdőtől a haladóig</td>
+                </tr>
+                <tr>
+                    <td>Takarók</td>
+                    <td>Kényelmes takarók a hideg telekre. </td>
+                    <td>Haladó</td>
+                </tr>
+            </tbody>
+        </table>
+        </p>
+        <p>
+        <h6>Gombok</h6>
+        <button id="hidden-text">Show Hidden Text</button>
+        <p id="secret-message"></p>
+        </p>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Kreatív Klub</p>
+    </footer>
+    <script>
+        document.getElementById('hidden-text').addEventListener('click', function() {
+            var secretMessage = document.getElementById('secret-message');
+            secretMessage.style.display = 'block';
+            secretMessage.innerHTML += 'Szeretek kötni!<br>';
+
+            // random szín generálása
+            var randomColor = getRandomColor();
+
+            document.getElementById('hidden-text').style.backgroundColor = randomColor;
+        });
+
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+</body>
+
+</html>

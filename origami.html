@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="script.js"></script>
+    <title>Kreatív Klub</title>
+    <style>
+        #sliderContainer {
+            text-align: center;
+        }
+
+        #imageSlider {
+            max-width: 100%;
+            height: auto;
+            transition: opacity 1s ease-in-out 0.3s;
+        }
+
+        img#imageSlider {
+            width: 40%;
+            height: auto;
+            margin-right: 50px;
+            border: 2px solid #c81282;
+        }
+
+        a:link#origami-link {
+            text-decoration: none;
+            color: rgb(225, 98, 0);
+        }
+
+        a:hover#origami-link {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Kreatív Klub</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Kezdőlap</a></li>
+                <li><a href="origami.html">Origami</a></li>
+                <li><a href="knitting.html">Kötés</a></li>
+                <li><a href="apply.html">Jelentkezés</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="origami-home">
+        <h1>Origami klub</h1>
+
+        <h3>Mi az az origami?</h3>
+        <p>
+            Az origami a papírhajtogatás japán megfelelője. Többnyire négyzet alakú papírból kiindulva (de egyéb
+            síkidomokból is) készíthetünk állatokat, tárgyakat, díszeket, geometriai formákat, segédeszközök
+            használatával vagy anélkül. A kezdőtől a haladó szintig terjedő nehézségi skálán nagyon sokféle
+            origamiformát lehet találni. A modellek összetettségét az egyszerűtől a szuperkomplex szintig skálázzák.
+        </p>
+        <h3>Története</h3>
+        <p>
+            Az origami (折り紙) japán eredetű szó. Jelentése az ori = hajtogatás és a kami = papír (ami a rendaku miatt
+            gami-vá változik) összetételéből keletkezett. Az origami fejleszti a kézügyességet, összehangolja a szem és
+            a kéz munkáját, így hat a bal és jobb agyfélteke működésére, segíti a tájékozódást, irányok észlelését,
+            térérzékelést, ismerteti az alapvető geometriai formákat és fogalmakat, végül fejleszti a kreativitást, a
+            memóriát és a gondolkodást.
+            <br>
+            Eredetére nincs egyértelmű bizonyíték. A hagyomány szerint egy buddhista szerzetes vitte a hajtogatás titkát
+            Japánba a 6. század folyamán. Az első feljegyzések az 1600-as évek végéről származnak. A tradicionális Japán
+            papírhajtogatást még nem övezték szigorú szabályok, így a papírt el lehetett vágni akár több helyen is, sőt
+            meg is lehetett gyűrni. Így sokak szerint Japánban a Heian-korban (794-1185) kezdtek origamizni. Ekkoriban
+            már hallani lehetett olyan mesékről, hogy egy ember papírból madarat formázott, másvalaki pedig egy papírból
+            készült békát varázsolt át egy teljesen más formává. Fontos azonban megjegyezni, hogy a "formázás" nem
+            egyenlő a papírhajtogatással.
+            <br>
+            A ma ismert legrégebbi japán origamiról szóló feljegyzés 1680-ból származik. Ihara Szaikaku versében írt
+            arról, hogy esküvők és egyéb szertartások alkalmával papírból készült origamimadarakat használtak
+            dekorációnak, így sokáig csak ünnepi alkalomra készült. Egyes szamuráj családok régi írásai közt olvashatók
+            szabályok arról, hogy a szertartások alkalmával milyen figurákat lehet használni, és hogyan kell őket
+            elkészíteni.
+            <br>
+            Kicsivel több mint száz évvel később, 1797-ben jelent meg az első nyomtatott origamikönyv. Szerzője Akiszato
+            Magakidzsima, a „Szenbacura orikatacsi”, azaz „Az ezer daru hajtogatása” címmel jelentette meg. 1845-ben Kan
+            no Mado összegyűjtötte a tradicionális japán formákat: ekkor indult világhódító útjára az origami.
+        </p>
+        <h2>Miért érdemes csatlakozni hozzánk?</h2>
+        <p>
+        <ul>
+            <li>Mert fejlesztheted az origami tudásodat! Sok tagunk már több mint 30 éve hajtogat, szívesen segítenek
+                neked új hajtogatások, ötletek megvalósításában.</li>
+            <li>Több város közelében is találsz olyan origamis klubokat, vagy segítőket, akiket személyesen
+                felkereshetsz, ha tanulni szeretnél.</li>
+            <li>Ha szeretnél könyvet, vagy papírt vásárolni a hajtogatásokhoz, mi szívesen segítünk ebben.</li>
+            <li>Hírlevelekben értesülhetsz az ország különböző településein rendezett origamis eseményekről.</li>
+            <li>Ha közénk tartozol, kedvezményesen vehetsz részt az egyesület táborain, találkozóin, rendezvényein.</li>
+        </ul>
+        </p>
+        <p>
+            Betekintés a tananyagba:
+            <a id="origami-link" href="https://en.wikibooks.org/wiki/Origami/Techniques/Practice">Online tananyag</a>
+            <br>
+        </p>
+    </section>
+
+    <div id="sliderContainer">
+        <img id="imageSlider" src="images/origami1.jpg" alt="Origami">
+    </div>
+
+    <script>
+        // képek tömbje
+        const images = ["images/origami1.jpg", "images/origami2.png", "images/origami3.jpg", "images/origami4.jpg"];
+        let currentIndex = 0;
+
+        // elhalványul a képünk, majd kicseréljük
+        function changeImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            const imageSlider = document.getElementById("imageSlider");
+            imageSlider.style.opacity = 0;
+
+            // képcsere
+            setTimeout(function () {
+                imageSlider.src = images[currentIndex];
+                imageSlider.style.opacity = 1;
+            }, 1000); // 1 s-et várunk
+        }
+
+        // váltás kezdése
+        setInterval(changeImage, 3000);
+    </script>
+
+
+    <footer>
+        <p>&copy; 2023 Kreatív Klub</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,21 @@
     <script src="jquery-3.3.1.min.js"></script>
     <script src="script.js"></script>
     <title>Kreatív Klub</title>
+    <style>
+        .member_images_container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .member_images_container img {
+            width: 40%;
+            height: auto;
+            margin-right: 50px;
+            border: 2px solid #c81282;
+        }
+    </style>
 </head>
+
 <body>
 
     <header>
@@ -23,8 +38,24 @@
     </header>
 
     <section id="home">
-        <h2>Köszöntünk a weboldalunkon!</h2>
-        <p>Bemutatkozás</p>
+        <h1>Köszöntünk weboldalunkon!</h1>
+        <h3>Bemutatkozik a Kreatív Klub csapata</h3>
+        <p>A klubbunkban egy <span style="color:#c81282;font-weight:bold">origamival</span> és <span
+                style="color:#c81282;font-weight:bold">kötéssel</span> foglalkozni szerető társaság foglalkozik már évek
+            óta ezen tevékenységek űzésével, népszerűsítésével. </p>
+        <div class="member_images_container">
+            <img src="images/origami_members.jpg" alt="Origami Members">
+            <img src="images/knitting_members.jpg" alt="Knitting Members">
+        </div>
+        <br>
+        <p>
+            Az origami egy olyan mindenki által gyakorolható kézművesség, mely egyaránt edzésben tartja az elmét és a
+            kezet. Hajtogatás közben kikapcsolódhatsz, alkothatsz és játszhatsz egyszerre. Nem számít kor, vagy
+            társadalmi helyzet, végzettség, nem kell hozzá különösebb kézügyesség vagy tudás sem. Természetesen ugyanez
+            elmondható a kötésre is!
+            <br>
+            <em>Jelentkezz bátran!</em>
+        </p>
     </section>
 
     <footer>
@@ -32,4 +63,5 @@
     </footer>
 
 </body>
+
 </html>
