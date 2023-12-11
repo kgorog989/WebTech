@@ -97,9 +97,9 @@
         </table>
         </p>
         <p>
-        <h6>Gombok</h6>
-        <button id="hidden-text">Show Hidden Text</button>
-        <p id="secret-message"></p>
+        <h6>(Titkos szöveg)</h6>
+        <button id="hidden-text">Nyomdd meg ezt a gombot!</button>
+        <p class="secret-message"></p>
         </p>
 
     </section>
@@ -109,7 +109,7 @@
     </footer>
     <script>
         document.getElementById('hidden-text').addEventListener('click', function() {
-            var secretMessage = document.getElementById('secret-message');
+            var secretMessage = document.getElementsByClassName('secret-message').item(0);
             secretMessage.style.display = 'block';
             secretMessage.innerHTML += 'Szeretek kötni!<br>';
 

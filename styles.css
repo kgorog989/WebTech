@@ -99,7 +99,7 @@ a:hover#knitting-link {
     cursor: pointer;
 }
 
-#secret-message {
+.secret-message {
     display: none;
     margin-top: 10px;
     font-size: 18px;
